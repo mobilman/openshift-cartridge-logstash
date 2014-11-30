@@ -29,8 +29,10 @@ function stop() {
     if [ -f $pid ]; then
         kill -s SIGTERM $(cat $pid)
         rm $pid
+    else
+	echo "Logstash is already stopped" 1>&2
+        return 0
     fi
-    return 1
 }
 
 function restart() {

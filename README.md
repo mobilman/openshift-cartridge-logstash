@@ -9,7 +9,7 @@ These environment variables are used when configuring Logstash:
 
  * **`OPENSHIFT_LOGSTASH_ES_HOST`**: URL of the Elasticsearch cluster to log to. Required.
  * **`OPENSHIFT_LOGSTASH_ES_PORT`**: Port Elasticsearch is running. Optional, default=9200.
- * **`OPENSHIFT_LOGSTASH_ES_USERNAME`**: Username to connect as. Optional.
+ * **`OPENSHIFT_LOGSTASH_ES_USER`**: Username to connect as. Optional.
  * **`OPENSHIFT_LOGSTASH_ES_PASSWORD`**: Password to connect with. Optional.
 
 If your Elasticsearch is running under OpenShift itself, set environment variable `OPENSHIFT_LOGSTASH_ES_PORT` to specify the port it's waitings connections on.
@@ -20,7 +20,7 @@ First, configure the application with the appropriate environment variables. The
 
     # Configure environment
     $ rhc set-env --app my-app --env "OPENSHIFT_LOGSTASH_ES_HOST=abc123-us-east-1.foundcluster.com"
-    $ rhc set-env --app my-app --env "OPENSHIFT_LOGSTASH_ES_USERNAME=readwrite"
+    $ rhc set-env --app my-app --env "OPENSHIFT_LOGSTASH_ES_USER=readwrite"
     $ rhc set-env --app my-app --env "OPENSHIFT_LOGSTASH_ES_PASSWORD=secret"
 
     # Add cartridge
