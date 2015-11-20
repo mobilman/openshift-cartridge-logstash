@@ -24,7 +24,7 @@ First, configure the application with the appropriate environment variables. The
     $ rhc set-env --app my-app --env "OPENSHIFT_LOGSTASH_ES_PASSWORD=secret"
 
     # Add cartridge
-    $ rhc cartridge add -a your-app-name https://cartreflect-claytondev.rhcloud.com/github/foundit/openshift-logstash-cartridge
+    $ rhc cartridge add -a your-app-name https://cartreflect-claytondev.rhcloud.com/github/mobilman/openshift-logstash-cartridge
 
 If you want better control of your Logstash configuration, for this repository, customize [conf/logstash.conf.erb] and specify your repository in the last step.
 
